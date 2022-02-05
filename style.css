@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+}
+
 body{
     padding:0px;
     margin:0px;
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
+    max-width: 1300px;
 }
 p {
     font-weight:100;
+}
+h1{
+    text-align: center;
 }
 .topnav .icon{
     display:none
@@ -28,10 +37,8 @@ p {
     display:flex;
     justify-content:left;
     background-color:var(--col-bg-toolbar);
-    transition:box-shadow .2s;
-    transition-delay:.1s;
-    box-shadow:0px 0px 8px 0px #000;
-    background-color: #550099;
+    transition:.4s;
+    background-color: rgba(255, 0, 0, 0);
 }
 .navbar.open{
     box-shadow:none;
@@ -39,7 +46,7 @@ p {
 }
 .menu-item{
     margin:0px 8px;
-    color: #fff;
+    color: #000;
     cursor:pointer;
     position:relative;
     text-decoration:none;
@@ -61,11 +68,118 @@ p {
     left:0;
     background: rgba(255,255,255,0);
     transition:.2s;
-    transform:scaleX(1);
+    transform:scaleX(0);
     transform-origin:center;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-left:none;
+    border-right:none;
 }
 .menu-item:hover::after{
-    background-color: rgba(230,230,230,.2);
+    transform: scaleX(1);
 }
-.padder{height: 80px;}
+.colored{
+    background-color: white;
+}
+
+#cover-image{
+    width: 100%;
+    height: 100vh;
+}
+.full-image{
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+.padder{
+    height: 80px;
+    width:100%;
+}
+
+
+#contact-form{
+    width: 80%;
+    min-width: 500px;
+    background-color: #ccc;
+    position: relative;
+    left:50%;
+    transform: translatex(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+}
+#submit-form{
+    width: 90px;
+    height: 40px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+footer{
+    padding: 10px 20px;
+}
+#all-products{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: middle;
+}
+.product{
+    width: 300px;
+    padding: 25px;
+}
+.image-holder{
+    width: 100%;
+    overflow:hidden;
+}
+.image-holder > a > img{
+    width: 100%;
+    object-fit: scale-down;
+    transition: transform .2s;
+}
+.image-holder > a > img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.product > h2 {
+    margin: 8px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+.product-actions > a{
+    float:left;
+    margin: 8px 0px;
+    margin-left:20px;
+    cursor: pointer;
+    color: black;
+    transition: .4s;
+    text-decoration: none;
+}
+.product-actions > i{
+    float:right;
+    margin: 8px 0px;
+    font-size: 19.3px;
+    margin-right:20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.product-actions>a:hover, .product-actions>i:hover{
+    color: blue;
+}
+.product-actions > a:hover::after{
+    opacity:0;
+    content:" >>";
+    animation: arrows .4s forwards ease-in-out;
+    position: relative;
+}
+@keyframes arrows{
+    0%{
+        opacity:0;
+        left:-10px;
+    }
+    100%{
+        opacity: 1;
+        left:0px;
+    }
+}
