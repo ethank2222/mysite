@@ -126,7 +126,7 @@ footer{
     align-items: middle;
 }
 .product{
-    width: 300px;
+    width: 225px;
     padding: 25px;
 }
 .image-holder{
@@ -142,10 +142,10 @@ footer{
     transform: scale(1.1);
     cursor: pointer;
 }
-.product > h2 {
+.product > h3 {
     margin: 8px 0px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 300;
 }
 .product-actions > a{
     float:left;
