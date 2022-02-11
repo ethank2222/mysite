@@ -29,17 +29,18 @@ h1,h2{
 }
 .logo{
     margin-left:20px;
-    max-height:50px;
+    height:70px;
     position:absolute;
     top:50%;
     left:0;
     transform:translateY(-50%);
     cursor:pointer;
     text-align: left;
+    transition:.2s;
 }
 .navbar{
     position:fixed;
-    height:70px;
+    height:90px;
     z-index:1000;
     width:100%;
     display:flex;
@@ -87,6 +88,10 @@ h1,h2{
 }
 .colored{
     background-color: white;
+    height: 70px;
+}
+.colored > a > img{
+    height:50px;
 }
 
 #cover-image{
