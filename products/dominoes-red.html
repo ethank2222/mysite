@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="robots" content="index, follow">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
         <meta charset="UTF-8">
         <meta name="description" content="">
         <title>Ethan's Dominoes - Red Toppling Dominoes</title>
@@ -13,24 +13,62 @@
     <body>
         <header>
             <div class="navbar" id="navigation">
-                <a href="#"><img class="logo logo-large" src="images/dominoes-red.jpg"/></a>
+                <a href="#"><img class="logo logo-large" src="../logo.png"/></a>
                 <div class="menu-items">
-                    <a class="menu-item" href="index.html">Home</a>
-                    <a class="menu-item" href="products.html">Products</a>
-                    <a class="menu-item" href="about.html">About</a>
-                    <a class="menu-item" href="contact.html">Contact</a>
+                    <a class="menu-item" href="../index.html">Home</a>
+                    <a class="menu-item" href="../products.html">Products</a>
+                    <a class="menu-item" href="../about.html">About</a>
+                    <a class="menu-item" href="../contact.html">Contact</a>
                     <a class="menu-item" href="#">Cart</a>
                 </div>
             </div>
         </header>
         <div class="padder"></div>
         <div class="wrapper"> <!-- wrapper div starts -->
-             <img src="images/dominoes-red.jpg"/>
-             <div>
-             <h1>Red Toppling Dominoes</h1>
-            
-
+            <div class="product-side-by-side">
+                <div class="product-images">
+                    <div>
+                        <img id="main-image" src="../images/dominoes_red.png"/>
+                    </div>
+                    <div id="image-carousel-options">
+                        <img src="../images/dominoes_red.png"/>
+                        <img src="../images/dominoes_orange.png"/>
+                        <img src="../images/dominoes_yellow.png"/>
+                    </div>
+                </div>
+                <div class="product-description">
+                    <h1>Red Toppling Dominoes (Qty 100)</h1>
+                    <div style="display:flex">
+                        <p style="width: 80%; font-weight: bold; font-size: 20px;">Price: 14.99</p>
+                        <button style="width:120px; height:40px;">Add To Cart</button>
+                    </div>
+                    <p>Topplerz Dominoes are top-quality, professional-grade dominoes that are fun for all ages. From simple domino lines to complex towers, we guarantee that our sturdy dominoes will perform to your satisfaction.</p>
+                    <p>We believe that presentation matters. Each of our products come in easy-to-wrap product boxes that are perfect for gifts.</p>
+                </div>
+            </div>
+            <h2>People Also Bought</h2>
+            <div class="all-products">
+                <div class="product">
+                    <div class="image-holder">
+                        <a href="products/dominoes-red.html"><img src="../images/templates.png"/></a>
+                    </div>
+                    <h3><a href="products/dominoes-red.html">Templates</a></h3>
+                    <div class="product-actions">
+                        <p>$8.99</p>
+                        <i class="fa fa-cart-plus" title="Add to cart"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
+        <script>
+            let x = document.getElementById("image-carousel-options").children;
+            for (var i = 0; i < x.length; i++){
+                x[i].addEventListener('click',function (e){
+                    var tar = e.target;
+                    document.getElementById("main-image").src= tar.src;
+                });
+            }
+        </script>
     </body>
 </html>
