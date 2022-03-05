@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /*
     Cyan: 2edfbc;
     Orange: df7e2e;
     Blue: 752edf;
 */
-
+/*General*/
 * {
-    font-family: 'Monteserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body{
@@ -14,6 +14,7 @@ body{
     margin:0px;
     overflow-x: hidden;
     max-width: 1300px;
+    background-color: #e7e7e7;
 }
 p {
     font-weight:100;
@@ -26,18 +27,21 @@ h1,h2{
 .wrapper{
     margin: 0px 60px;
 }
-.topnav .icon{
-    display:none
+@media only screen and (max-width: 600px){
+    .wrapper{
+        margin: 0px 30px;
+    }
 }
+
+/*Navigation*/
 .logo{
-    margin-left:20px;
+    left:20px;
     height:70px;
-    position:absolute;
-    top:50%;
-    left:0;
-    transform:translateY(-50%);
+    object-fit: scale-down;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
     cursor:pointer;
-    text-align: left;
     transition:.2s;
 }
 .navbar{
@@ -61,7 +65,7 @@ h1,h2{
 }
 .navbar>div{
     position:absolute;
-    right:28.6666666667px;
+    right:30px;
     display:flex;
     top:50%;
     transform:translateY(-50%)
@@ -92,7 +96,20 @@ h1,h2{
 .colored > a > img{
     height:50px;
 }
+#menu-on-small, .menu-items > i{
+    display: none;
+}
+@media only width and (max-width: 900px){
+    .menu-items > i{
+        display: flex;
+    }
+    .menu-items > a{
+        display: none;
+    }
+}
 
+
+/*Home*/
 #cover-image{
     width: 100%;
     height: 100vh;
@@ -110,6 +127,7 @@ h1,h2{
     width:100%;
 }
 
+/*Contact*/
 
 #contact-form{
     width: 80%;
@@ -132,6 +150,7 @@ textarea:focus, input:focus{
 }
 footer{
     padding: 10px 20px;
+    background-color: white;
 }
 .all-products{
     width: 100%;
@@ -195,16 +214,6 @@ footer{
     animation: arrows .4s forwards ease-in-out;
     position: relative;
 }
-
-.product-container{
-    width:fit-content;
-}
-.product-navigation{
-    width: 25vw;
-    background-color: blue;
-    margin: 30px;
-    height:min-content;
-}
 .product-page{
     padding: 30px;
 }
@@ -212,7 +221,7 @@ footer{
     display: flex;
 }
 .product-images{
-    width: 50%;
+    width: 150%;
 }
 .product-images > div{
     width: fit-content;
@@ -221,6 +230,7 @@ footer{
 .product-description{
     width:100%;
     padding: 20px 50px;
+    margin: auto;
 }
 #image-carousel-options > img{
     max-width: 100px;
@@ -228,6 +238,7 @@ footer{
     object-fit: scale-down;
     cursor: pointer;
     transition: .2s;
+    border-radius: 3px;
 }
 #image-carousel-options > img:hover{
     background-color: #eee;
@@ -235,9 +246,78 @@ footer{
 }
 #main-image{
     width:100%;
-    height: 300px;
+    height: 55vh;
     object-fit: contain;
+    margin: 30px 0px 20px;
 }
 .product-wrapper{
     display: flex;
+}
+/*Product Page*/
+.product-description > div{
+    display:flex
+}
+.product-description > div > p{
+    margin: 28px 0px 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media only screen and (max-width: 980px){
+    .product-images{
+        width: 75%;
+    }
+    .product-description{
+        width:100%;
+        padding: 20px 30px;
+        margin: auto;
+    }
+    #image-carousel-options > img{
+        max-width: 70px;
+        max-height: 70px;
+    }
+}
+@media only screen and (max-width: 756px){
+    #image-carousel-options{
+        display: none;
+    }
+    .product-side-by-side{
+        display: block;
+    }
+    .product-images{
+        margin: auto;
+    }
+    .product-description{
+        width: initial;
+    }
+    #main-image{
+        height: initial;
+        max-height: 40vh;
+    }
+}
+
+/*Product Page*/
+@media only screen and (max-width: 756px){
+    .product{
+        justify-content: center;
+        width: 100%;
+        display: inherit;
+        align-items: center;
+        gap: 20px;
+        padding: 0px;
+    }
+    .product > h3{
+        margin: 0px;
+        width: calc(100% - 300px);
+        min-width: 100px;
+        text-align: left;
+    }
+    .image-holder{
+        width: 100px;
+        height: 100px;
+    }
+    .image-holder > a > img{
+        width: 100px;
+        height: 100px;
+    }
 }

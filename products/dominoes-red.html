@@ -6,22 +6,32 @@
         <link rel="stylesheet" href="../style.css">
         <meta charset="UTF-8">
         <meta name="description" content="">
-        <title>Ethan's Dominoes - Red Toppling Dominoes</title>
-        <link rel="icon" href="icon.png">
+        <title>Red Toppling Dominoes (Quantity 100)- Topplerz Dominoes</title>
+        <link rel="icon" href="../icon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
-            <div class="navbar" id="navigation">
-                <a href="#"><img class="logo logo-large" src="../logo.png"/></a>
+            <nav class="navbar" id="navigation">
+                <a href="../index.html"><img class="logo logo-large" src="../logo.png"/></a>
                 <div class="menu-items">
                     <a class="menu-item" href="../index.html">Home</a>
                     <a class="menu-item" href="../products.html">Products</a>
+                    <a class="menu-item" href="../schools.html">Schools</a>
                     <a class="menu-item" href="../about.html">About</a>
+                    <a class="menu-item" href="../why-topplerz.html">Why Topplerz</a>
                     <a class="menu-item" href="../contact.html">Contact</a>
-                    <a class="menu-item" href="#">Cart</a>
+                    <i class="fa fa-bars menu-item" id="hamburger"></i>
                 </div>
-            </div>
+            </nav>
+            <nav id="menu-on-small">
+                <a class="menu-item" href="../index.html">Home</a>
+                <a class="menu-item" href="../products.html">Products</a>
+                <a class="menu-item" href="../schools.html">Schools</a>
+                <a class="menu-item" href="../about.html">About</a>
+                <a class="menu-item" href="../why-topplerz.html">Why Topplerz</a>
+                <a class="menu-item" href="../contact.html">Contact</a>
+            </nav>
         </header>
         <div class="padder"></div>
         <div class="wrapper"> <!-- wrapper div starts -->
@@ -37,38 +47,32 @@
                     </div>
                 </div>
                 <div class="product-description">
-                    <h1>Red Toppling Dominoes (Qty 100)</h1>
-                    <div style="display:flex">
-                        <p style="width: 80%; font-weight: bold; font-size: 20px;">Price: 14.99</p>
-                        <button style="width:120px; height:40px;">Add To Cart</button>
+                    <h1 style="margin: 0px;">Red Toppling Dominoes (100)</h1>
+                    <div>
+                        <p>Price: $14.99</p>
+                        <div id='product-component-1646507253685'></div>
                     </div>
-                    <p>Topplerz Dominoes are top-quality, professional-grade dominoes that are fun for all ages. From simple domino lines to complex towers, we guarantee that our sturdy dominoes will perform to your satisfaction.</p>
-                    <p>We believe that presentation matters. Each of our products come in easy-to-wrap product boxes that are perfect for gifts.</p>
+                    <p style="margin: 0px;">Topplerz Dominoes are top-quality, professional-grade dominoes that are fun for all ages. From simple domino lines to complex towers, we guarantee that our sturdy dominoes will perform to your satisfaction.</p>
+                    <p style="margin: 10px 0px;">We believe that presentation matters. Each of our products come in easy-to-wrap product boxes that are perfect for gifts.</p>
                 </div>
             </div>
             <h2>People Also Bought</h2>
             <div class="all-products">
                 <div class="product">
                     <div class="image-holder">
-                        <a href="products/dominoes-red.html"><img src="../images/templates.png"/></a>
+                        <a href="../products/dominoes-red.html"><img src="../images/templates.png"/></a>
                     </div>
-                    <h3><a href="products/dominoes-red.html">Templates</a></h3>
+                    <h3><a href="../products/dominoes-red.html">Templates</a></h3>
                     <div class="product-actions">
                         <p>$8.99</p>
-                        <i class="fa fa-cart-plus" title="Add to cart"></i>
                     </div>
                 </div>
             </div>
         </div>
         <script src="../main.js"></script>
-        <script>
-            let x = document.getElementById("image-carousel-options").children;
-            for (var i = 0; i < x.length; i++){
-                x[i].addEventListener('click',function (e){
-                    var tar = e.target;
-                    document.getElementById("main-image").src= tar.src;
-                });
-            }
-        </script>
+        <br/><br/>
+        <footer>
+            <p>Copyright © 2022 Topplerz Dominoes. All rights reserved.</p>
+        </footer>
     </body>
 </html>
