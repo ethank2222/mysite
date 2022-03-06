@@ -8,6 +8,7 @@
 /*General*/
 * {
     font-family: 'Nunito', sans-serif;
+    font-size: 10px;
 }
 
 body{
@@ -17,13 +18,18 @@ body{
     max-width: 1300px;
     background-color: #e7e7e7;
 }
+@media only screen and (max-width: 800px){
+    *{
+        font-size: 9px;
+    }
+}
 p {
     font-weight:100;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 h1,h2{
     text-align: center;
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 .wrapper{
     margin: 0px 60px;
@@ -63,6 +69,7 @@ h1,h2{
     position:relative;
     text-decoration:none;
     padding: 12px 8px 10px;
+    font-size: 1.6rem;
 }
 .navbar>div{
     position:absolute;
@@ -91,7 +98,7 @@ h1,h2{
 }
 i.menu-item{
     transition: .2s;
-    font-size: 22px;
+    font-size: 2.2rem;
 }
 i.menu-item:hover{
     transform: scale(1.2);
@@ -213,7 +220,7 @@ footer{
     cursor: pointer;
 }
 #arrow-prev, #arrow-next{
-    font-size: 30px;
+    font-size: 3.0rem;
     align-self: center;
     transition: .2s;
 }
@@ -237,7 +244,7 @@ footer{
 .product > h3 > a{
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .product-actions > p{
     float:left;
@@ -249,7 +256,7 @@ footer{
 .product-actions > i{
     float:right;
     margin: 8px 0px;
-    font-size: 19.3px;
+    font-size: 1.93rem;
     margin-right:20px;
     cursor: pointer;
     transition: .2s;
@@ -310,7 +317,7 @@ footer{
     margin: 28px 0px 20px;
     width: 100%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2.0rem;
 }
 @media only screen and (max-width: 980px){
     .product-images{
