@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /*
-    Cyan: 2edfbc;
-    Orange: df7e2e;
-    Blue: 752edf;
+    Orange: e6ba5c
+    Blue: 8f5ce6
+    Red: e6755c
+    Green: 5ce6bf
 */
 /*General*/
 * {
@@ -47,7 +48,7 @@ h1,h2{
 .navbar{
     position:fixed;
     height:90px;
-    z-index:1000;
+    z-index:10;
     width:100%;
     display:flex;
     justify-content:left;
@@ -85,11 +86,18 @@ h1,h2{
     border-left:none;
     border-right:none;
 }
-.menu-item:hover::after{
+.menu-items > a.menu-item:hover::after{
     transform: scaleX(1);
 }
+i.menu-item{
+    transition: .2s;
+    font-size: 22px;
+}
+i.menu-item:hover{
+    transform: scale(1.2);
+}
 .colored{
-    background-color: white;
+    background-color: #e6ba5c;
     height: 70px;
     box-shadow: 0px 0px 5px -1px #000000;
 }
@@ -99,28 +107,52 @@ h1,h2{
 #menu-on-small, .menu-items > i{
     display: none;
 }
-@media only width and (max-width: 900px){
+#menu-small{
+    display:none;
+}
+@media only screen and (max-width: 900px){
     .menu-items > i{
         display: flex;
     }
     .menu-items > a{
         display: none;
     }
+    #menu-small{
+        width: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #e6ba5c;
+        top: 70px;
+        z-index: 20;
+        box-shadow: 0px 10px 5px -10px #000000;
+        padding-bottom: 20px;
+    }
+    #menu-small > a{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        transition: 0.2s;
+    }
+    #menu-small > a:hover{
+        transform: scale(1.1);
+        justify-self: center;
+    
+    }
 }
+
+
 
 
 /*Home*/
-#cover-image{
+#banner-container{
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
-.full-image{
-    width: 80%;
-    object-fit: cover;
-    height: calc(100vh - 70px);
-}
-.image-right{
-    float:right;
+#banner-video{
+    object-position: center center;
 }
 .padder{
     height: 80px;
@@ -179,6 +211,23 @@ footer{
 .image-holder > a > img:hover{
     transform: scale(0.95);
     cursor: pointer;
+}
+#arrow-prev, #arrow-next{
+    font-size: 30px;
+    align-self: center;
+    transition: .2s;
+}
+#arrow-next{
+    padding: 10px 4px 10px 10px;
+    border-radius: 5px 0px 0px 5px;
+}
+#arrow-prev{
+    padding: 10px 10px 10px 4px;
+    border-radius: 0px 5px 5px 0px;
+}
+#arrow-prev:hover, #arrow-next:hover{
+    cursor: pointer;
+    background-color: #bbb;
 }
 .product > h3 {
     margin: 8px 0px 0px 0px;
@@ -245,10 +294,10 @@ footer{
     filter: brightness(0.8);
 }
 #main-image{
-    width:100%;
+    width: calc(100% - 62px);
     height: 55vh;
     object-fit: contain;
-    margin: 30px 0px 20px;
+    margin: 20px 0px;
 }
 .product-wrapper{
     display: flex;
@@ -278,6 +327,7 @@ footer{
     }
 }
 @media only screen and (max-width: 756px){
+    
     #image-carousel-options{
         display: none;
     }
@@ -286,6 +336,7 @@ footer{
     }
     .product-images{
         margin: auto;
+        width: initial;
     }
     .product-description{
         width: initial;
@@ -296,7 +347,7 @@ footer{
     }
 }
 
-/*Product Page*/
+/*All Products Page*/
 @media only screen and (max-width: 756px){
     .product{
         justify-content: center;

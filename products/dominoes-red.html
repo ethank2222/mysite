@@ -24,21 +24,15 @@
                     <i class="fa fa-bars menu-item" id="hamburger"></i>
                 </div>
             </nav>
-            <nav id="menu-on-small">
-                <a class="menu-item" href="../index.html">Home</a>
-                <a class="menu-item" href="../products.html">Products</a>
-                <a class="menu-item" href="../schools.html">Schools</a>
-                <a class="menu-item" href="../about.html">About</a>
-                <a class="menu-item" href="../why-topplerz.html">Why Topplerz</a>
-                <a class="menu-item" href="../contact.html">Contact</a>
-            </nav>
         </header>
         <div class="padder"></div>
         <div class="wrapper"> <!-- wrapper div starts -->
             <div class="product-side-by-side">
                 <div class="product-images">
-                    <div>
+                    <div style="display: flex">
+                        <i id="arrow-prev" class="fa fa-angle-double-left"></i>
                         <img id="main-image" src="../images/dominoes_red.png"/>
+                        <i id="arrow-next" class="fa fa-angle-double-right"></i>
                     </div>
                     <div id="image-carousel-options">
                         <img src="../images/dominoes_red.png"/>
@@ -70,6 +64,7 @@
             </div>
         </div>
         <script src="../main.js"></script>
+        <script src="carousel.js"></script>
         <br/><br/>
         <footer>
             <p>Copyright © 2022 Topplerz Dominoes. All rights reserved.</p>

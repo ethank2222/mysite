@@ -1,5 +1,5 @@
 window.setInterval(function() {
-    if(window.scrollY > 10){
+    if(window.scrollY > 10 || document.getElementById("menu-small") != null){
         if (document.getElementById("navigation").className.includes("colored") == false) {
             document.getElementById("navigation").classList.add("colored");
         }
@@ -10,13 +10,6 @@ window.setInterval(function() {
         }
     }
 },100);
-let x = document.getElementById("image-carousel-options").children;
-for (var i = 0; i < x.length; i++){
-    x[i].addEventListener('click',function (e){
-        var tar = e.target;
-        document.getElementById("main-image").src= tar.src;
-    });
-}
 
 document.getElementById("hamburger").addEventListener("click", function(){
     if (document.getElementById("menu-small") == null){
@@ -79,11 +72,11 @@ document.getElementById("hamburger").addEventListener("click", function(){
                 },
                 "button": {
                   ":hover": {
-                    "background-color": "#b18715"
+                    "background-color": "#5e20cb"
                   },
-                  "background-color": "#c59617",
+                  "background-color": "#8f5ce6",
                   ":focus": {
-                    "background-color": "#b18715"
+                    "background-color": "#5e20cb"
                   },
                   "border-radius": "5px",
                   "padding-left": "30px",
@@ -125,11 +118,11 @@ document.getElementById("hamburger").addEventListener("click", function(){
                 },
                 "button": {
                   ":hover": {
-                    "background-color": "#b18715"
+                    "background-color": "#5e20cb"
                   },
-                  "background-color": "#c59617",
+                  "background-color": "#8f5ce6",
                   ":focus": {
-                    "background-color": "#b18715"
+                    "background-color": "#5e20cb"
                   },
                   "border-radius": "5px",
                   "padding-left": "30px",
@@ -145,11 +138,11 @@ document.getElementById("hamburger").addEventListener("click", function(){
       "styles": {
         "button": {
           ":hover": {
-            "background-color": "#b18715"
+            "background-color": "#5e20cb"
           },
-          "background-color": "#c59617",
+          "background-color": "#8f5ce6",
           ":focus": {
-            "background-color": "#b18715"
+            "background-color": "#5e20cb"
           },
           "border-radius": "5px"
         }
@@ -162,12 +155,12 @@ document.getElementById("hamburger").addEventListener("click", function(){
     "toggle": {
       "styles": {
         "toggle": {
-          "background-color": "#c59617",
+          "background-color": "#8f5ce6",
           ":hover": {
-            "background-color": "#b18715"
+            "background-color": "#5e20cb"
           },
           ":focus": {
-            "background-color": "#b18715"
+            "background-color": "#5e20cb"
           }
         }
       }
