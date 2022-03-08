@@ -1,6 +1,6 @@
 let data = {
     "prices": {
-        "dominoes-red": "$13.99",
+        "dominoes-red": "$14.99",
         "dominoes-orange": "$14.99",
         "dominoes-yellow": "$14.99",
         "dominoes-light-green": "$14.99",
