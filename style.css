@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 /*
-    Orange: e6ba5c
-    Blue: 8f5ce6
-    Red: e6755c
-    Green: 5ce6bf
+    Orange: #F49F1C
+    Blue: #030E4F
 
-    Orange-light:f2dcad
 */
 /*General*/
+:root {
+    --white-color: #D0D0D0;
+    --primary-color: #F49F1C;
+    --secondary-color: #030E4F;
+    --primary-color-dark: #db880a;
+  }
 * {
     font-family: 'Nunito', sans-serif;
     font-size: 10px;
@@ -62,11 +65,10 @@ h1,h2{
     justify-content:left;
     background-color:var(--col-bg-toolbar);
     transition:.4s;
-    background-color: rgba(255, 0, 0, 0);
 }
 .menu-item{
     margin:0px 8px;
-    color: #000;
+    color: black;
     cursor:pointer;
     position:relative;
     text-decoration:none;
@@ -106,9 +108,19 @@ i.menu-item:hover{
     transform: scale(1.2);
 }
 .colored{
-    background-image: linear-gradient(to right, #edd49e, #e6ba5c);
+    background-color: #030E4F;
     height: 70px;
     box-shadow: 0px 0px 5px -1px #000000;
+    background-image: none;
+}
+.colored > div > a{
+    color: var(--white-color);
+}
+.colored > a > img{
+    content: url(logo2.png);
+}
+.colored > div > a:after{
+    border-color: var(--white-color);
 }
 .colored > a > img{
     height:50px;
@@ -123,6 +135,9 @@ i.menu-item:hover{
     .menu-items > i{
         display: flex;
     }
+    .colored i{
+        color: var(--white-color);
+    }
     .menu-items > a{
         display: none;
     }
@@ -132,7 +147,7 @@ i.menu-item:hover{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-image: linear-gradient(to right, #edd49e, #e6ba5c);
+        background-color: var(--secondary-color);
         top: 70px;
         z-index: 20;
         box-shadow: 0px 10px 5px -10px #000000;
@@ -143,6 +158,7 @@ i.menu-item:hover{
         justify-content: center;
         display: flex;
         transition: 0.2s;
+        color: var(--white-color);
     }
     #menu-small > a:hover{
         transform: scale(1.1);
@@ -190,7 +206,7 @@ textarea:focus, input:focus{
 }
 footer{
     padding: 10px 20px;
-    background-color: white;
+    background-color: var(--white-color);
 }
 .all-products{
     width: 100%;
