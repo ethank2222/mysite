@@ -13,7 +13,9 @@ let data = {
         "dominoes-black": "$14.99",
         "dominoes-white": "$14.99",
         
-        "templates": "$8.99"
+        "templates": "$8.99",
+
+        "play-set": "$74.99"
     }
 }
 
