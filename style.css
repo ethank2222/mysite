@@ -194,6 +194,18 @@ i.menu-item:hover{
 }
 
 /*Contact*/
+.form-wrapper{
+    display: flex;
+}
+.form-wrapper > div{
+    width:50%;
+}
+.form-wrapper img{
+    max-width:100%;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
 #contact-form, #contact-form > *{
     font-size: 1.8rem;
     border:none;
@@ -202,9 +214,10 @@ i.menu-item:hover{
 #contact-form{
     display: flex;
     flex-direction: column;
-    min-width: 400px;
-    width: 60%;
+    min-width: 0px;
+    width: calc(100% - 40px);
     margin: auto;
+    padding: 0px 20px;
     justify-content: center;
 }
 #contact-form > input, #contact-form > textarea{
@@ -219,6 +232,23 @@ i.menu-item:hover{
 #contact-form, #contact-form > *:focus{
     resize: none;
     outline: none;
+}
+#img-left{
+    margin: 20px;
+}
+@media only screen and (max-width: 700px){
+    .form-wrapper{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 30px;
+    }
+    #img-left, #form-right{
+        margin: auto;
+        width: 100%;
+    }
+    #img-left{
+        transform: translateY(50%)
+    }
 }
 
 /*other*/
