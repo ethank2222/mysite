@@ -15,7 +15,7 @@ let data = {
         
         "templates": "$8.99",
 
-        "build-set": "$84.99",
+        "build-set": "$74.99",
         "play-set": "$49.99",
 
         "domino-container": "$ 19.99",
