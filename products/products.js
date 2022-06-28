@@ -9,17 +9,15 @@ let data = {
         "dominoes-blue": "$14.99",
         "dominoes-purple": "$14.99",
         "dominoes-pink": "$14.99",
-        "dominoes-clear": "$14.99",
         "dominoes-black": "$14.99",
-        "dominoes-white": "$14.99",
         
         "templates": "$8.99",
 
-        "build-set": "$74.99",
-        "play-set": "$49.99",
+        "build-set": "$79.99",
+        "play-set": "$34.99",
 
-        "domino-container": "$ 19.99",
-        "domino-container-small": "12.99"
+        "domino-container": "$19.99",
+        "domino-container-small": "$12.99"
     }
 }
 
