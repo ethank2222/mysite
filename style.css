@@ -5,6 +5,9 @@
 
 */
 /*General*/
+html {
+    scroll-behavior: smooth;
+  }
 :root {
     --white-color: #D0D0D0;
     --primary-color: #F49F1C;
@@ -44,7 +47,7 @@ body{
 }
 @media only screen and (max-width: 800px){
     *{
-        font-size: 9px;
+        font-size: 10px;
     }
 }
 p , p > *{
@@ -53,6 +56,9 @@ p , p > *{
 h1,h2{
     text-align: center;
     font-size: 2.8rem;
+}
+h3{
+    font-size: 2.4rem;
 }
 .wrapper{
     margin: 0px 60px;
@@ -214,7 +220,7 @@ i.menu-item:hover{
     color:var(--primary-color);
     text-decoration: none;
     padding: 0px;
-    margin: 10px 0px 0px;
+    margin: 3px 0px 0px;
 }
 .mainpage-header p{
     text-align: center;
@@ -226,13 +232,20 @@ i.menu-item:hover{
 }
 #mainpage-banner-link:hover::after{
     content:" >";
-    margin-left: 10px;
+    margin-left: 3px;
     font-weight: bold;
 }
 #mainpage-banner-link:hover{
-    margin-left: 10px;
+    margin-left: 3px;
 }
 #banner-container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    object-fit:cover;
+    object-position: 0% 20%;
+}
+#banner-container > *{
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -246,7 +259,7 @@ i.menu-item:hover{
 .icon-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     margin: 30px 0px;
     flex-wrap: wrap;
@@ -274,14 +287,17 @@ i.menu-item:hover{
 .home-product p{
     text-align: left
 }
+.home-product > div > div p{
+    padding: 10px 20px 0px 0px;
+}
 .home-product > img{
     max-height: 50vh;
     width: 40%;
     align-self: center;
 }
-.home-product .button{
-    margin: auto 0px;
-    margin-left: 30px;
+.home-product .home-product-button{
+    max-width: 136px!important;
+    margin: 0px 0px 10px 20px;
 }
 .home-product.right-text > div{
     margin: 0px 0px 0px 80px;
@@ -404,10 +420,6 @@ i.menu-item:hover{
     }
 }
 /*other*/
-footer{
-    padding: 10px 20px;
-    background-color: var(--white-color);
-}
 .all-products{
     width: 100%;
     display: flex;
@@ -670,3 +682,29 @@ tr:nth-child(even) {
   color: red;
 }
 
+/*footer*/
+footer{
+    display:flex;
+    padding: 10px 40px;
+    background-color: var(--white-color);
+}
+footer > *{
+    width: 50%;
+}
+footer p:nth-child(2){
+    text-align: right;
+}
+@media only screen and (max-width: 800px){
+    footer{
+        flex-wrap: wrap;
+    }
+    footer > *{
+        width: 100%;
+        text-align: center;
+        margin: 5px 0px;
+    }
+    footer p:nth-child(2){
+        text-align: center;
+    }
+    
+}

@@ -35,21 +35,28 @@
                   <th style="width: 18%"><p style="padding-right:10px;">Wooden Dominoes</p><img style="max-width:100%; max-height:50px;" src="images/dominoes_wood.png"/></th>
                   <th style="width: 18%"><p style="padding-right:10px;">Classic Dominoes</p><img style="max-width:100%; max-height:50px;" src="images/dominoes_classic.png"/></th>
                   
+                </tr>                
+                <tr>
+                  <td>Made for Stacking</td>
+                  <td class="darken"><i class="fa fa-check"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
                 </tr>
                 <tr>
-                  <td>Sample text</td>
+                  <td>Weighted for Toppling</td>
                   <td class="darken"><i class="fa fa-check"></i></td>
-                  <td><i class="fa fa-check"></i></td>
-                  <td><i class="fa fa-check"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
                 </tr>
                 <tr>
-                  <td>Sample text</td>
+                  <td>Made for Stacking</td>
                   <td class="darken"><i class="fa fa-check"></i></td>
-                  <td><i class="fa fa-check"></i></td>
-                  <td><i class="fa fa-check"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
+                  <td><i class="fa fa-remove"></i></td>
                 </tr>
               </table>
         </div>
         <script src="main.js"></script>
+        <script type="text/javascript">/*<![CDATA[*/(function () {  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';  if (window.ShopifyBuy) {    if (window.ShopifyBuy.UI) {      ShopifyBuyInit();    } else {      loadScript();    }  } else {    loadScript();  }  function loadScript() {    var script = document.createElement('script');    script.async = true;    script.src = scriptURL;    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);    script.onload = ShopifyBuyInit;  }  function ShopifyBuyInit() {    var client = ShopifyBuy.buildClient({      domain: 'box-dominoes.myshopify.com',      storefrontAccessToken: 'eab296b1fc629958af6419a988c48396',    });    ShopifyBuy.UI.onReady(client).then(function (ui) {      ui.createComponent('product', {        id: '6757333303386',        node: document.getElementById('product-component-1656471884119'),        moneyFormat: '%24%7B%7Bamount%7D%7D',        options: {  "product": {    "styles": {      "product": {        "@media (min-width: 601px)": {          "max-width": "calc(25% - 20px)",          "margin-left": "20px",          "margin-bottom": "50px"        }      },      "button": {        ":hover": {          "background-color": "#dc8f19"        },        "background-color": "#f49f1c",        ":focus": {          "background-color": "#dc8f19"        },        "border-radius": "5px",        "padding-left": "30px",        "padding-right": "30px",        "display": "none"      }    },    "contents": {      "img": false,      "title": false,      "price": false    },    "text": {      "button": "Add to cart"    }  },  "productSet": {    "styles": {      "products": {        "@media (min-width: 601px)": {          "margin-left": "-20px"        }      }    }  },  "modalProduct": {    "contents": {      "img": false,      "imgWithCarousel": true,      "button": false,      "buttonWithQuantity": true    },    "styles": {      "product": {        "@media (min-width: 601px)": {          "max-width": "100%",          "margin-left": "0px",          "margin-bottom": "0px"        }      },      "button": {        ":hover": {          "background-color": "#dc8f19"        },        "background-color": "#f49f1c",        ":focus": {          "background-color": "#dc8f19"        },        "border-radius": "5px",        "padding-left": "30px",        "padding-right": "30px"      }    },    "text": {      "button": "Add to cart"    }  },  "option": {},  "cart": {    "styles": {      "button": {        ":hover": {          "background-color": "#dc8f19"        },        "background-color": "#f49f1c",        ":focus": {          "background-color": "#dc8f19"        },        "border-radius": "5px"      }    },    "text": {      "total": "Subtotal",      "button": "Checkout"    }  },  "toggle": {    "styles": {      "toggle": {        "background-color": "#f49f1c",        ":hover": {          "background-color": "#dc8f19"        },        ":focus": {          "background-color": "#dc8f19"        }      }    }  }},      });    });  }})();/*]]>*/</script>
     </body>
 </html>

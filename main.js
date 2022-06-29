@@ -40,7 +40,7 @@ window.onscroll = function myFunction() {
     scrollOffset.style.backgroundPosition = "-100%";
     var xvalue = "center";
     var factor = 0.8;
-    var yvalue = scrolltotop * factor - 950;
+    var yvalue = scrolltotop * factor - 1550;
     target.style.backgroundPosition = xvalue + " " + yvalue + "px";
 }
 
