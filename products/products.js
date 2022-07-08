@@ -10,6 +10,9 @@ let data = {
         "dominoes-purple": "$14.99",
         "dominoes-pink": "$14.99",
         "dominoes-black": "$14.99",
+        "dominoes-silver": "$14.99",
+        "dominoes-gold": "$14.99",
+        "dominoes-bronze": "$14.99",
         
         "templates": "$8.99",
 

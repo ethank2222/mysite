@@ -436,16 +436,16 @@ i.menu-item:hover{
     width: 100%;
     overflow:hidden;
     height: 200px;
+    transition: transform .2s;
 }
 .image-holder > a > img{
     width: 100%;
     object-fit: scale-down;
     max-height: 100%;
     object-position: 50% 50%;
-    transition: transform .2s;
 }
-.image-holder > a > img:hover{
-    transform: scale(0.95);
+.image-holder:hover{
+    transform: scale(1.05);
     cursor: pointer;
 }
 #arrow-prev, #arrow-next{
@@ -681,6 +681,12 @@ tr:nth-child(even) {
 .fa-remove {
   color: red;
 }
+th:nth-child(3){
+    display: none;
+}
+td:nth-child(3){
+    display: none;
+}
 
 /*footer*/
 footer{
@@ -707,4 +713,31 @@ footer p:nth-child(2){
         text-align: center;
     }
     
+}
+.about-section{
+    display:flex;
+    width: 100%;
+    padding: 25px 0px;
+    justify-content: center;
+}
+.about-section > img{
+    width:50%;
+    object-fit: contain;
+}
+.about-section > div{
+    width: 50%;
+    padding: 0px 50px;
+}
+@media only screen and (max-width: 900px){
+    .about-section{
+        flex-wrap:wrap;
+    }
+    .about-section > div{
+        width: 100%;
+        order: 1;
+    }
+    .about-section > img{
+        width: 80%;
+        order: 2;
+    }
 }
