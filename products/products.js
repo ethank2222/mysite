@@ -1,3 +1,11 @@
+/*
+Bronze, Silver, Gold
+Orange, Silver, Blue
+Red, Yellow, Blue
+Pink, Purple, Turquoise
+Light Green, Light Blue, Black
+*/
+
 let data = {
     "prices": {
         "dominoes-red": "$14.99",

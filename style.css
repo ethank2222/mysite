@@ -681,11 +681,14 @@ tr:nth-child(even) {
 .fa-remove {
   color: red;
 }
-th:nth-child(3){
-    display: none;
-}
-td:nth-child(3){
-    display: none;
+
+@media only screen and (max-width: 800px){
+    td:nth-child(3){
+        display: none;
+    }
+    th:nth-child(3){
+        display: none;
+    }
 }
 
 /*footer*/
@@ -722,7 +725,8 @@ footer p:nth-child(2){
 }
 .about-section > img{
     width:50%;
-    object-fit: contain;
+    object-fit:contain;
+    max-height: 70vh;
 }
 .about-section > div{
     width: 50%;
