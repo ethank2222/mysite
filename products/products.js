@@ -26,6 +26,7 @@ let data = {
 
         "build-set": "$79.99",
         "play-set": "$34.99",
+        "school-set": "$199.99",
 
         "domino-container": "$19.99",
         "domino-container-small": "$12.99"
